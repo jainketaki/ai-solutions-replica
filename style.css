@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    padding-top: 10px;
+}
+
+/* Custom styles for the top navigation bar */
+.bg-dark {
+    background-color: #0d1e44 !important;
+}
+
+/* Initial state (optional, can be default) */
+/* This is your initial header state. No need for fixed positioning yet. */
+header {
+  position: relative;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* New CSS class to be added by JavaScript */
+.scrolled-header .bg-dark {
+  display: none; /* Hides the top dark bar */
+}
+
+.scrolled-header .navbar {
+  position: fixed; /* Makes the navbar fixed to the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff !important; /* Ensures the background is white */
+  transition: all 0.3s ease-in-out;
+}
+/* Custom styles for the main navigation bar */
+.navbar-brand {
+    font-weight: 700;
+    color: #0d1e44 !important;
+    
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #333 !important;
+    
+}
+
+.nav-link:hover {
+    color: #0d1e44 !important;
+    
+}
+
+.search-icon i {
+    font-size: 1.2em;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: url('hero-image.jpg') no-repeat center center/cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Ensure content is on top of the overlay */
+}
+
+/* General section styling */
+.factors-section {
+    background-color: #f8f9fa;
+}
+
+.focus-areas-section {
+    background-color: #ffffff;
+}
+
+/* Styling for the three-column feature block */
+.factor-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.factor-number {
+    width: 40px;
+    height: 40px;
+    background-color: #e9ecef;
+    color: #495057;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.factor-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #212529;
+}
+
+.factor-description {
+    color: #6c757d;
+}
+
+/* Styling for the "Focus Areas" section */
+.focus-areas-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #212529;
+}
+
+.focus-areas-section .lead {
+    color: #6c757d;
+}
+
+.focus-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #dee2e6;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.focus-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.focus-icon {
+    width: 24px; /* Adjust as needed */
+    height: 24px; /* Adjust as needed */
+    margin-right: 10px;
+}
+
+.focus-text {
+    font-weight: 500;
+    color: #495057;
+}
+
+/* Specific styling for the first focus item for the gradient effect */
+.focus-item:first-child {
+    background: linear-gradient(to right, #e7e9f8, #f8f9fe);
+    border-color: #4b67e0;
+}
+/* Styling for the section container */
+.predictive-analytics-section {
+    background-color: #f8f9fa;
+}
+
+/* Styling for the card element */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+/* Image alignment within the column */
+.predictive-analytics-section .col-md-6 img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Styling for the services section */
+/* Styling for the services section */
+.services-section {
+    background-color: #0F054B;
+    position: relative; /* Needed for absolute positioning of the curve */
+    padding-bottom: 0; /* Remove default padding bottom to let curve sit flush */
+}
+
+/* Curve separator styling */
+.curve-separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 110px; /* Height of the SVG viewBox */
+    overflow: hidden; /* Hide any overflow from the SVG */
+}
+
+.curve-separator svg {
+    display: block; /* Remove extra space below SVG */
+    width: 100%;
+    height: 100%;
+}
+
+.service-item {
+    padding: 30px;
+}
+
+.service-icon i {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.service-item p {
+    color: #c0c0c0;
+}
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  display: block; /* To remove extra space below the image */
+}
+/* Styling for the news and updates section */
+.news-updates-section {
+    background-color: #f8f9fa;
+}
+
+.news-updates-section h6 {
+    color: #6c757d;
+}
+
+
+.news-updates-section h2 {
+    color: #212529;
+}
+
+/* Projects Section Styling */
+.projects-section {
+    background-color: #f8f9fa;
+}
+
+.projects-section h6 {
+    color: #6c757d;
+}
+
+.projects-section .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #dee2e6;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.active {
+    background-color: #0F054B;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #0F054B;
+}
+
+.footer-top {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer address,
+footer p,
+footer li {
+    font-size: 0.9rem;
+    color: #c0c0c0;
+}
+
+footer a {
+    color: #c0c0c0 !important;
+}
+
+footer a:hover {
+    color: #ffffff !important;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    background: url('/img/bg.jpg') no-repeat center center/cover;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    color: #ffffff;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    z-index: 1; /* Ensure overlay is below content but above background */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Ensure content is on top of the overlay */
+}
+
+.hero-content h1 {
+    font-size: 3em; /* Adjust font size as needed */
+    font-weight: 700;
+    margin: 0;
+}
+.about-section {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+  padding-left: 50px;
+}
+.about-heading {
+  color: #6c757d;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.btn-outline-light {
+    border-color: #c0c0c0 !important;
+    color: #c0c0c0 !important;
+}
+
+.btn-outline-light:hover {
+    background-color: #c0c0c0 !important;
+    color: #0F054B !important;
+}
+
+.form-control {
+    background-color: transparent !important;
+    border: 1px solid #c0c0c0;
+    color: #ffffff !important;
+}
+
+.form-control::placeholder {
+    color: #c0c0c0;
+}
+/* Styling for the tab buttons */
+.focus-tabs-list .focus-item {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Active state for the tab button */
+.focus-tabs-list .focus-item.active {
+    background: linear-gradient(to right, #e7e9f8, #f8f9fe);
+    border-color: #0F054B;
+}
+
+/* General styling for the content panels */
+.tab-content-container {
+    background-color: #f8f9fa;
+}
+
+/* Initially hide all content panels */
+.tab-pane {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Show the active content panel */
+.tab-pane.active {
+    display: block;
+}
+
+/* Fade-in animation for content change */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Container for the image and overlay */
+.image-hover-container {
+    position: relative; /* Crucial for absolute positioning of the overlay */
+    overflow: hidden; /* Hides any overflow from the scaling effect */
+}
+
+/* The semi-transparent overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* A 50% black translucent layer */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The text that appears on hover */
+.overlay-text {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: bold;
+    opacity: 0; /* Starts as invisible */
+    transform: translateY(20px); /* Starts slightly below its final position */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* The hover effects */
+.image-hover-container:hover .overlay {
+    opacity: 1; /* Makes the overlay fully visible */
+}
+
+.image-hover-container:hover .overlay-text {
+    opacity: 1; /* Makes the text visible */
+    transform: translateY(0); /* Moves the text to its final centered position */
+}
